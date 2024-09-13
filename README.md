@@ -51,7 +51,7 @@ Copy code
 ├── ## requirements.txt         # Python dependencies
 └── ##  README.md                # Project documentation
 
-** Setup Instructions
+## Setup Instructions
 1. Clone the Repository
 bash
 Copy code
@@ -60,7 +60,7 @@ cd project-root
 2. Install CUDA and NVIDIA Drivers
 Ensure you have a CUDA-capable NVIDIA GPU installed.
 
-** Verify CUDA-Capable GPU
+## Verify CUDA-Capable GPU
 bash
 Copy code
 lspci | grep -i nvidia
@@ -72,24 +72,24 @@ sudo update-pciids
 lspci | grep -i nvidia
 Refer to CUDA GPUs to confirm your GPU is supported.
 
-** Install CUDA Toolkit and Drivers
+## Install CUDA Toolkit and Drivers
 Follow the instructions specific to your Linux distribution:
 
-** Ubuntu 24.04
+## Ubuntu 24.04
 
 The install_cuda_nvcc.py script can automatically install CUDA for Ubuntu 24.04.
 
-** Other Distributions
+## Other Distributions
 
 Refer to the NVIDIA CUDA Downloads page for instructions specific to your distribution.
 
-** 3. Run the Setup Script
+## 3. Run the Setup Script
 This script creates a Python virtual environment and installs all necessary Python dependencies.
 
 bash
 Copy code
 bash scripts/setup.sh
-** 4. Activate the Virtual Environment
+## 4. Activate the Virtual Environment
 bash
 Copy code
 source env/bin/activate
