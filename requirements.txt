@@ -1,0 +1,7 @@
+torch>=1.11.0
+transformers>=4.19.2
+datasets[audio]>=2.3.2
+librosa>=0.9.1
+ffmpeg-python>=0.2.0
+tqdm>=4.64.0
+accelerate>=0.6.2
