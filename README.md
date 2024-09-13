@@ -1,50 +1,57 @@
-Whisper Large V3 Transcription
-Description
+# Whisper Large V3 Transcription
+
+## Description
+
 This project utilizes OpenAI's Whisper Large V3 model to transcribe audio files using a low-memory GPU setup. It's designed to run efficiently on laptops with GPUs like the 3070 Ti with 8GB VRAM. The project includes scripts for setting up the necessary environment, installing dependencies, and processing audio files for transcription.
 
-Features
-CUDA Support: Optimized for NVIDIA GPUs with CUDA capabilities.
-Audio Preprocessing: Removes silence from audio files to improve transcription accuracy.
-Efficient Transcription: Utilizes the Whisper Large V3 model with support for low-memory GPU setups.
-User-Friendly Scripts: Easy setup and execution with provided scripts.
-Automated Dependency Checks: Ensures all necessary packages and system requirements are met.
-Dependencies
-Python 3.8+
-CUDA Toolkit and NVIDIA Drivers (for GPU acceleration)
-PyTorch
-Transformers
-Datasets
-Librosa
-FFmpeg-Python
-tqdm
-Accelerate
-ffmpeg (system package)
-Refer to requirements.txt for specific versions of Python packages.
+## Features
 
-Project Structure
+- **CUDA Support:** Optimized for NVIDIA GPUs with CUDA capabilities.
+- **Audio Preprocessing:** Removes silence from audio files to improve transcription accuracy.
+- **Efficient Transcription:** Utilizes the Whisper Large V3 model with support for low-memory GPU setups.
+- **User-Friendly Scripts:** Easy setup and execution with provided scripts.
+- **Automated Dependency Checks:** Ensures all necessary packages and system requirements are met.
+
+## Dependencies
+
+- **Python 3.8+**
+- **CUDA Toolkit and NVIDIA Drivers** (for GPU acceleration)
+- **PyTorch**
+- **Transformers**
+- **Datasets**
+- **Librosa**
+- **FFmpeg-Python**
+- **tqdm**
+- **Accelerate**
+- **ffmpeg** (system package)
+
+Refer to `requirements.txt` for specific versions of Python packages.
+
+## Project Structure 
 bash
 Copy code
 /project-root
 │
-├── env/                     # Virtual environment directory (not included in Git)
-├── src/                     # Source files
+├── ## env/                     # Virtual environment directory (not included in Git)
+├── ## src/                     # Source files
 │   ├── transcribe.py                 # Main Python script for transcription
 │   └── install_cuda_nvcc.py          # Script to install CUDA and NVCC
 │
-├── scripts/                 # Shell scripts
+├── ## scripts/                 # Shell scripts
 │   ├── setup.sh                     # Setup script for installing dependencies
 │   └── run.sh                       # Script to run the transcription
 │
-├── examples/                # Example audio files
+├── ## examples/                # Example audio files
 │   └── sample_audio.m4a
 │
-├── results/                 # Directory for output results
+├── ## results/                 # Directory for output results
 │   └── (transcription outputs)
 │
-├── .gitignore               # Git ignore file
-├── requirements.txt         # Python dependencies
-└── README.md                # Project documentation
-Setup Instructions
+├── ## .gitignore               # Git ignore file
+├── ## requirements.txt         # Python dependencies
+└── ##  README.md                # Project documentation
+
+** Setup Instructions
 1. Clone the Repository
 bash
 Copy code
@@ -53,7 +60,7 @@ cd project-root
 2. Install CUDA and NVIDIA Drivers
 Ensure you have a CUDA-capable NVIDIA GPU installed.
 
-Verify CUDA-Capable GPU
+** Verify CUDA-Capable GPU
 bash
 Copy code
 lspci | grep -i nvidia
@@ -65,24 +72,24 @@ sudo update-pciids
 lspci | grep -i nvidia
 Refer to CUDA GPUs to confirm your GPU is supported.
 
-Install CUDA Toolkit and Drivers
+** Install CUDA Toolkit and Drivers
 Follow the instructions specific to your Linux distribution:
 
-Ubuntu 24.04
+** Ubuntu 24.04
 
 The install_cuda_nvcc.py script can automatically install CUDA for Ubuntu 24.04.
 
-Other Distributions
+** Other Distributions
 
 Refer to the NVIDIA CUDA Downloads page for instructions specific to your distribution.
 
-3. Run the Setup Script
+** 3. Run the Setup Script
 This script creates a Python virtual environment and installs all necessary Python dependencies.
 
 bash
 Copy code
 bash scripts/setup.sh
-4. Activate the Virtual Environment
+** 4. Activate the Virtual Environment
 bash
 Copy code
 source env/bin/activate
@@ -105,7 +112,7 @@ Output:
 
 bash
 Copy code
-Usage: bash scripts/run.sh [options] input_audio_file
+** Usage: bash scripts/run.sh [options] input_audio_file
 
 Transcribe an audio file using OpenAI's Whisper model.
 
@@ -117,12 +124,12 @@ Optional arguments:
   --output_text OUTPUT_TEXT     Path to save the transcription text file.
   -h, --help                    Show this help message and exit.
 
-Example:
+# Example:
   bash scripts/run.sh examples/sample_audio.m4a --output_text results/transcription.txt
 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
-Steps to Contribute:
+# Steps to Contribute:
 
 Fork the project repository.
 Create a new branch for your feature or bug fix.
@@ -132,7 +139,7 @@ Submit a pull request to the main repository.
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgements
+# Acknowledgements
 OpenAI for the Whisper model.
 Hugging Face Transformers for the Transformers library.
 PyTorch for the deep learning framework.
