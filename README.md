@@ -1,6 +1,6 @@
 Whisper Large V3 Transcription
 Description
-This project utilizes OpenAI's Whisper Large V3 model to transcribe audio files efficiently, even on laptops with GPUs like the NVIDIA RTX 3070 Ti with 8GB VRAM. The project includes scripts for setting up the necessary environment, installing dependencies, and processing audio files for transcription.
+This project utilizes OpenAI's Whisper Large V3 model to transcribe audio files using a low-memory GPU setup. It's designed to run efficiently on laptops with GPUs like the 3070 Ti with 8GB VRAM. The project includes scripts for setting up the necessary environment, installing dependencies, and processing audio files for transcription.
 
 Features
 CUDA Support: Optimized for NVIDIA GPUs with CUDA capabilities.
@@ -8,49 +8,25 @@ Audio Preprocessing: Removes silence from audio files to improve transcription a
 Efficient Transcription: Utilizes the Whisper Large V3 model with support for low-memory GPU setups.
 User-Friendly Scripts: Easy setup and execution with provided scripts.
 Automated Dependency Checks: Ensures all necessary packages and system requirements are met.
-Table of Contents
-Whisper Large V3 Transcription
-Description
-Features
-Table of Contents
-Dependencies
-Project Structure
-Setup Instructions
-1. Clone the Repository
-2. Install CUDA and NVIDIA Drivers
-3. Run the Setup Script
-4. Activate the Virtual Environment
-Usage
-Transcribe an Audio File
-Example
-Display Help Information
-Contributing
-License
-Acknowledgements
 Dependencies
 Python 3.8+
-
 CUDA Toolkit and NVIDIA Drivers (for GPU acceleration)
-
-Python Packages:
-
-Refer to requirements.txt for specific versions.
-
-torch
-transformers
-datasets[audio]
-librosa
-ffmpeg-python
+PyTorch
+Transformers
+Datasets
+Librosa
+FFmpeg-Python
 tqdm
-accelerate
+Accelerate
 ffmpeg (system package)
+Refer to requirements.txt for specific versions of Python packages.
+
 Project Structure
 bash
 Copy code
 /project-root
 │
 ├── env/                     # Virtual environment directory (not included in Git)
-│
 ├── src/                     # Source files
 │   ├── transcribe.py                 # Main Python script for transcription
 │   └── install_cuda_nvcc.py          # Script to install CUDA and NVCC
@@ -127,7 +103,7 @@ Copy code
 bash scripts/run.sh --help
 Output:
 
-vbnet
+bash
 Copy code
 Usage: bash scripts/run.sh [options] input_audio_file
 
@@ -165,3 +141,4 @@ Note: Ensure that all system dependencies like CUDA, NVIDIA drivers, and FFmpeg 
 
 For any issues or questions, please open an issue on the GitHub repository or contact the maintainer.
 
+Replace [repository-url] with the actual URL of your GitHub repository when you publish it.
